@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Desafio Pic Pay</title>
+</head>
+
+<body>
+
+    <header id="title">
+        <img class="title_icone" src="/image/user-interface.png" alt="icone de cadastro">
+        <h2 >Crie seu cadastro</h2>
+    </header>
+    <!-- Botões radio para a escolha do formulario correto-->
+
+    <label class="radio_btn1">
+        <input type="radio" name="tipoPessoa" value="fisica"> Pessoa Física
+    </label>
+    <label class="radio_btn2">
+        <input type="radio" name="tipoPessoa" value="lojista"> Pessoa Lojista
+    </label>
+
+
+    <!-- Formulário para Pessoa Física -->
+    <form id="formPessoaFisica">
+        <h3>Cadastro Pessoa Física</h3>
+        <label for="nomeFisica">Nome:</label>
+        <input type="text" id="nomeFisica" name="nomeFisica" placeholder="Nome"><br><br>
+
+        <label for="emailFisica">Email:</label>
+        <input type="email" id="emailFisica" name="emailFisica" placeholder="Email"><br><br>
+
+        <label for="cpfFisica">CPF:</label>
+        <input type="text" id="cpfFisica" name="cpfFisica" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}"
+            placeholder="Digite um CPF válido (somente números)"><br><br>
+
+        <label for="senhaFisica">Senha:</label>
+        <input type="password" id="senhaFisica" name="senhaFisica" placeholder="Senha"><br><br>
+
+        <button class="btn_cadastrar_fisica" type="submit">Cadastrar Pessoa Física</button>
+    </form>
+
+    <!-- Formulário para Pessoa Lojista -->
+    <form id="formPessoaLojista">
+        <h3>Cadastro Pessoa Lojista</h3>
+        <label for="nomeLojista">Nome:</label>
+        <input type="text" id="nomeLojista" name="nomeLojista" placeholder="Nome"><br><br>
+
+        <label for="emailLojista">Email:</label>
+        <input type="email" id="emailLojista" name="emailLojista" placeholder="Email"><br><br>
+
+        <label for="cnpjLojista">CNPJ:</label>
+        <input type="text" id="cnpjLojista" name="cnpjLojista"
+            placeholder="Digite um CNPJ válido (somente números)"><br><br>
+
+        <label for="senhaLojista">Senha:</label>
+        <input type="password" id="senhaLojista" name="senhaLojista" placeholder="Senha"><br><br>
+
+        <button class="btn_cadastrar_lojista" type="submit">Cadastrar Pessoa Lojista</button>
+    </form>
+    <script src="./app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,67 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+:root {
+    --white: rgb(246, 246, 246);
+    --font-color: #E1D7B7;
+    --title-color: hsl(56, 45%, 80%);
+    --background-color: black ;
+    --background-image: url('/image/9WYxT.png');
+}
+
+
+body {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--background-color);
+}
+
+
+#title {
+    display: flex;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--white);
+    background: rgb(144, 137, 99);
+    border-radius: 10px;
+}
+
+.title_icone {
+    width: 2em;   
+    text-decoration: none;
+}
+
+.radio_btn1, .radio_btn2 {   
+    font-size: 20px;
+    text-transform: uppercase;
+    color: var(--font-color);
+}
+
+#formPessoaFisica {
+    /* background-image: var(--background-image); */
+    margin-top: 20px;
+    color: var(--font-color);
+}
+
+#formPessoaLojista {
+    margin-top: 20px;
+    color: var(--font-color);
+}
+
+.btn_cadastrar_fisica, .btn_cadastrar_lojista {
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.btn_cadastrar_fisica:hover, .btn_cadastrar_lojista:hover {
+    color: var(--background-color);
+    background-color: var(--font-color);
+}
