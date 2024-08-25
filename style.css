@@ -6,10 +6,12 @@
 
 :root {
     --white: rgb(246, 246, 246);
-    --font-color: #E1D7B7;
-    --title-color: hsl(56, 45%, 80%);
+    --font-color: hsl(0, 0%, 100%);
+    --title-color: hwb(0 100% 0%);
     --background-color: black ;
     --background-image: url('/image/9WYxT.png');
+    --verde-forte: #136C4C;
+    --verde-fraco: #238662 ;
 }
 
 
@@ -24,12 +26,11 @@ body {
 
 #title {
     display: flex;
-    margin-top: 50px;
-    margin-bottom: 20px;
+    margin-top: 120px;
+    margin-bottom: 40px;
     text-align: center;
     text-transform: uppercase;
     color: var(--white);
-    background: rgb(144, 137, 99);
     border-radius: 10px;
 }
 
@@ -38,30 +39,35 @@ body {
     text-decoration: none;
 }
 
+.msg_cadastro {
+    padding-top: 80px;
+    padding-bottom: 0px;
+    font-size: small;
+    color: var(--title-color);
+}
+
 .radio_btn1, .radio_btn2 {   
     font-size: 20px;
     text-transform: uppercase;
     color: var(--font-color);
 }
 
-#formPessoaFisica {
-    /* background-image: var(--background-image); */
-    margin-top: 20px;
-    color: var(--font-color);
-}
-
-#formPessoaLojista {
-    margin-top: 20px;
+#formPessoaFisica, #formPessoaLojista {
+    margin-top: 10px;
     color: var(--font-color);
 }
 
 .btn_cadastrar_fisica, .btn_cadastrar_lojista {
     cursor: pointer;
-    text-transform: uppercase;
+    font-size: 12px;
+    padding: 8px 10px ; /*padding: top right bottom left; */
     font-weight: bold;
+    color: var(--font-color);
+    background: var(--verde-forte);
+    border-radius: 10px;
 }
 
 .btn_cadastrar_fisica:hover, .btn_cadastrar_lojista:hover {
-    color: var(--background-color);
-    background-color: var(--font-color);
+    color: var(--font-color);
+    background-color: var(--verde-fraco);
 }
