@@ -6,10 +6,10 @@
 }
 
 :root {
-    --white: rgb(246, 246, 246);
-    --font-color: hsl(0, 0%, 100%);
-    --title-color: hwb(0 100% 0%);
-    --background-color: black ;
+    --white: black;
+    --font-color: black;
+    --title-color: black;
+    --background-color: white ;
     --background-image: url('/image/9WYxT.png');
     --verde-forte: #136C4C;
     --verde-fraco: #238662 ;
@@ -43,6 +43,7 @@ body, html {
     text-align: center;
     text-transform: uppercase;
     color: var(--white);
+    font-size: 25px;
 }
 
 .msg_cadastro {
@@ -54,6 +55,7 @@ body, html {
 .radio_btn1, .radio_btn2 {   
     margin: 10px 0;
     font-size: 20px;
+    font-weight: bold;
     text-transform: uppercase;
     color: var(--font-color);
 }
@@ -62,6 +64,28 @@ body, html {
     margin-top: 10px;
     color: var(--font-color);
     max-width: 100%;
+}
+
+ .form_input_blanks {
+    padding: 15px;
+    width: 350px;
+    outline: none;
+    border: 3px solid transparent;
+    border-radius: 10px;
+    box-shadow: none;
+    /* background-color: var(--background-color); */
+}
+
+.form_input_blanks:hover {
+    border-color:  var(--verde-fraco);
+    outline: none;
+    box-shadow: none;
+}
+
+.form_input_blanks:focus {
+    border-color: var(--verde-forte);
+    outline: none;
+    box-shadow: none;
 }
 
 .btn_cadastrar_fisica, .btn_cadastrar_lojista {
@@ -74,6 +98,8 @@ body, html {
     border-radius: 10px;
     margin-top: 10px;
     width: 100%;
+    outline: none;
+    border: 3px solid transparent;
 }
 
 .btn_cadastrar_fisica:hover, .btn_cadastrar_lojista:hover {
