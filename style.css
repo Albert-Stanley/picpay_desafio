@@ -73,6 +73,7 @@ body, html {
     border: 3px solid transparent;
     border-radius: 10px;
     box-shadow: none;
+    border-width: 3,5px;
     /* background-color: var(--background-color); */
 }
 
@@ -112,6 +113,6 @@ body, html {
     background-size: cover;
     background-position: center;
     display: flex;
-    flex: 1;
+    
 }
 
