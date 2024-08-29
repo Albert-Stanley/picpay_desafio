@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./estilos/cadastro.css">
+    <title>Desafio Pic Pay</title>
+</head>
+
+<body>
+
+    <div class="container">
+    <div class="container_esquerda">
+        <!-- Titulo -->
+        <header id="title">
+            <!-- <img class="title_icone" src="/image/fav_form_icon.png" alt="icone de cadastro"> -->
+            <h2>Abra sua conta PicPay</h2>
+        </header>
+
+        <!-- Botões radio para a escolha do formulario correto-->
+        <label class="radio_btn1">
+            <input type="radio" name="tipoPessoa" value="fisica"> Pessoa Física
+        </label>
+        <label class="radio_btn2">
+            <input type="radio" name="tipoPessoa" value="lojista"> Pessoa Lojista
+        </label>
+
+        <h2 class="msg_cadastro">Complete os campos abaixo para abrir sua conta PicPay:
+        </h2>
+
+        <!-- Formulário para Pessoa Física -->
+        <form id="formPessoaFisica">
+            <h3>Cadastro Pessoa Física</h3>
+            <label for="nomeFisica"></label>
+            <input class="form_blanks" type="text" id="nomeFisica" name="nomeFisica" placeholder="Nome*" required><br><br>
+
+            <label for="emailFisica"></label>
+            <input class="form_blanks" type="email" id="emailFisica" name="emailFisica" placeholder="Email*" required><br><br>
+
+            <label for="cpfFisica"></label>
+            <input class="form_blanks" type="text" id="cpfFisica" name="cpfFisica"
+                placeholder="Digite um CPF válido (somente números)*" maxlength="14" pattern="\d{3}\.?\d{3}\.?\d{3}-?\d{2}" required><br><br>
+
+            <label for="senhaFisica"></label>
+            <input class="form_blanks" type="password" id="senhaFisica" name="senhaFisica" placeholder="Senha*" required><br><br>
+
+            <button class="btn_cadastrar_fisica" type="submit">Enviar</button>
+        </form>
+
+        <!-- Formulário para Pessoa Lojista -->
+        <form id="formPessoaLojista">
+            <h3>Cadastro Pessoa Lojista</h3>
+            <label for="nomeLojista"></label>
+            <input class="form_blanks" type="text" id="nomeLojista" name="nomeLojista" placeholder="Nome*" required><br><br>
+
+            <label for="emailLojista"></label>
+            <input class="form_blanks" type="email" id="emailLojista" name="emailLojista" placeholder="Email*" required><br><br>
+
+            <label for="cnpjLojista"></label>
+            <input class="form_blanks" type="text" id="cnpjLojista" name="cnpjLojista"
+                placeholder="Digite um CNPJ válido (somente números)*" maxlength="14" pattern="\d{2}\.?\d{3}\.?\d{3}/?\d{4}-?\d{2}" required><br><br>
+
+            <label for="senhaLojista"></label>
+            <input class="form_blanks" type="password" id="senhaLojista" name="senhaLojista" placeholder="Senha*" required><br><br>
+
+            <button class="btn_cadastrar_lojista" type="submit">Enviar</button>
+        </form>
+    </div>
+
+    <div class="container_direita">
+        <img src="image/img_propaganda.jpg" alt="imagem_publi">
+    </div>
+    </div>
+
+
+    <script src="./app.js"></script>
+</body>
+
+</html>
