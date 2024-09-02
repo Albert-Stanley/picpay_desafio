@@ -10,38 +10,55 @@
     --font-color: black;
     --title-color: black;
     --background-color: white;
-    --background-image: url('/image/9WYxT.png');
     --verde-forte: #136C4C;
     --verde-fraco: #238662;
 }
 
-
 body,
 html {
-    display: flex;
     height: 100%;
+    margin: 0;
+    padding: 0;
     background-color: var(--background-color);
 }
-
 
 .container {
     display: flex;
     width: 100%;
-    height: 100%;
+    height: 100vh;
+    overflow: hidden;
 }
 
 .container_esquerda {
     width: 50%;
-    background-size: cover;
-    background-position: center;
+    height: 100%;
+    background-color: var(--background-color);
     display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.container_esquerda img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.container_direita {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
 }
 
 #title {
     margin-bottom: 20px;
     text-align: center;
     text-transform: uppercase;
-    color: var(--white);
+    color: var(--title-color);
     font-size: 25px;
 }
 
@@ -52,27 +69,20 @@ html {
     border: 3px solid transparent;
     border-radius: 10px;
     box-shadow: none;
-    border-width: 3, 5px;
-    /* background-color: var(--background-color); */
 }
 
 .form_blanks:hover {
     border-color: var(--verde-fraco);
-    outline: none;
-    box-shadow: none;
 }
 
 .form_blanks:focus {
     border-color: var(--verde-forte);
-    outline: none;
-    box-shadow: none;
 }
 
 button {
     cursor: pointer;
     font-size: 12px;
     padding: 8px 10px;
-    /*padding: top right bottom left; */
     font-weight: bold;
     color: var(--font-color);
     background: var(--verde-forte);
@@ -87,10 +97,40 @@ button:hover {
     background-color: var(--verde-fraco);
 }
 
-.container_direita {
-    width: 50%;
-    flex-direction: column;
-    box-sizing: border-box;
-    justify-content: center;
-    align-items: center;
+.levar_cadastro {
+    margin-top: 10px;
+    text-align: center;
+    color: var(--verde-forte);
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .container_esquerda {
+        width: 100%;
+        height: 300px;
+        order: 2;
+    }
+
+    .container_direita {
+        width: 100%;
+        order: 1;
+    }
+}
+
+@media (max-width: 480px) {
+    .container_esquerda {
+        display: none;
+    }
+
+    .container_direita {
+        width: 100%;
+        margin-top: 250px;
+    }
+
+    .form_blanks {
+        width: 100%;
+    }
 }
