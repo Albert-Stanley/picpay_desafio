@@ -1,14 +1,49 @@
-const radios = document.querySelectorAll('input[name="tipoPessoa"]');
-        
-radios.forEach(radio => {
-    radio.addEventListener('change', function() {
-        document.getElementById('formPessoaFisica').style.display = 'none';
-        document.getElementById('formPessoaLojista').style.display = 'none';
-        
-        const selectedForm = document.getElementById(`formPessoa${this.value.charAt(0).toUpperCase() + this.value.slice(1)}`);
-        selectedForm.style.display = 'block';
+const btnFisica = document.querySelector(".btn_fisica");
+const btnLojista = document.querySelector(".btn_lojista");
+const formFisica = document.querySelector(".form_fisica");
+const formLojista = document.querySelector(".form_lojista");
+
+document.addEventListener('DOMContentLoaded', function() {
+    const lastForm = localStorage.getItem('lastForm');
+    if (lastForm === 'fisica') {
+        formFisica.classList.add('active');
+    } else {
+        formLojista.classList.add('active');
+    }
+
+    btnFisica.addEventListener('click', function() {
+        formFisica.classList.add('active');
+        formLojista.classList.remove('active');
+        localStorage.setItem('lastForm', 'fisica');
+    });
+
+    btnLojista.addEventListener('click', function() {
+        formLojista.classList.add('active');
+        formFisica.classList.remove('active');
+        localStorage.setItem('lastForm', 'lojista');
     });
 });
+document.addEventListener('DOMContentLoaded', function() {
+    const lastForm = localStorage.getItem('lastForm');
+    if (lastForm === 'fisica') {
+        formFisica.classList.add('active');
+    } else {
+        formLojista.classList.add('active');
+    }
+
+    btnFisica.addEventListener('click', function() {
+        formFisica.classList.add('active');
+        formLojista.classList.remove('active');
+        localStorage.setItem('lastForm', 'fisica');
+    });
+
+    btnLojista.addEventListener('click', function() {
+        formLojista.classList.add('active');
+        formFisica.classList.remove('active');
+        localStorage.setItem('lastForm', 'lojista');
+    });
+});
+
 
 document.getElementById('formPessoaFisica').addEventListener('submit', function(event) {
     event.preventDefault();
@@ -49,3 +84,5 @@ function enviarDados(url, data) {
         console.error('Erro:', error);
     });
 }
+
+//teste
