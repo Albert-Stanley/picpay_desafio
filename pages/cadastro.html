@@ -14,23 +14,17 @@
     <div class="container_esquerda">
         <!-- Titulo -->
         <header id="title">
-            <!-- <img class="title_icone" src="/image/fav_form_icon.png" alt="icone de cadastro"> -->
             <h2>Abra sua conta PicPay</h2>
         </header>
 
-        <!-- Botões radio para a escolha do formulario correto-->
-        <label class="radio_btn1">
-            <input type="radio" name="tipoPessoa" value="fisica"> Pessoa Física
-        </label>
-        <label class="radio_btn2">
-            <input type="radio" name="tipoPessoa" value="lojista"> Pessoa Lojista
-        </label>
 
+        <button class="btn_fisica">Conta digital Pessoa Física</button>
+        <button class="btn_lojista">Conta digital para Lojista</button>
         <h2 class="msg_cadastro">Complete os campos abaixo para abrir sua conta PicPay:
         </h2>
 
         <!-- Formulário para Pessoa Física -->
-        <form id="formPessoaFisica">
+        <form id="formPessoaFisica" class="form_fisica">
             <h3>Cadastro Pessoa Física</h3>
             <label for="nomeFisica"></label>
             <input class="form_blanks" type="text" id="nomeFisica" name="nomeFisica" placeholder="Nome*" minlength="4" required><br><br>
@@ -49,7 +43,7 @@
         </form>
 
         <!-- Formulário para Pessoa Lojista -->
-        <form id="formPessoaLojista">
+        <form id="formPessoaLojista" class="form_lojista">
             <h3>Cadastro Pessoa Lojista</h3>
             <label for="nomeLojista"></label>
             <input class="form_blanks" type="text" id="nomeLojista" name="nomeLojista" placeholder="Nome*" minlength="4" required><br><br>

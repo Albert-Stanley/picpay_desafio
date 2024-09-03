@@ -12,6 +12,7 @@
     --background-color: white;
     --verde-forte: #136C4C;
     --verde-fraco: #238662;
+    --base-font-size: 16px;
 }
 
 body,
@@ -51,25 +52,37 @@ html {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding: 1.25rem;
+    position: relative;
+}
+
+.imagem_logo {
+    width: 20rem;
+    padding: 0 0 3.125rem 0;
+    position: absolute;
+    top: 1rem;
+    max-width: 100%;
+    height: auto;
+    margin-top: 1rem;
 }
 
 #title {
-    margin-bottom: 20px;
+    margin-bottom: 1.875rem;
     text-align: center;
     text-transform: uppercase;
     color: var(--title-color);
-    font-size: 25px;
+    font-size: 1.5625rem;
 }
 
+/* Estilos para os inputs */
 .form_blanks {
-    padding: 15px 30px ;
-    width: 100%; 
+    padding: 0.9375rem 1.875rem;
+    width: 100%;
     outline: none;
-    border: 3px solid transparent;
-    border-radius: 10px;
+    border: 0.1875rem solid transparent;
+    border-radius: 0.625rem;
     box-shadow: none;
-    font-size: 15px;
+    font-size: 0.9375rem;
 }
 
 .form_blanks:hover {
@@ -82,16 +95,16 @@ html {
 
 button {
     cursor: pointer;
-    font-size: 14px;
-    padding: 8px 10px;
+    font-size: 0.875rem;
+    padding: 0.5rem 0.625rem;
     font-weight: bold;
     color: var(--font-color);
     background: var(--verde-forte);
-    border-radius: 10px;
-    margin-top: 10px;
+    border-radius: 0.625rem;
+    margin-top: 0.625rem;
     width: 100%;
     outline: none;
-    border: 3px solid transparent;
+    border: 0.1875rem solid transparent;
 }
 
 button:hover {
@@ -104,13 +117,14 @@ a {
 
 a:hover {
     background-color: #E6F6F0;
-    width: 100px;
+    width: 6.25rem;
 }
 
 .levar_cadastro {
-    margin-top: 10px;
+    margin-top: 0.5rem;
     text-align: center;
     color: var(--verde-forte);
+    border-radius: 0.3125rem;
 }
 
 @media (max-width: 768px) {
@@ -120,7 +134,7 @@ a:hover {
 
     .container_esquerda {
         width: 100%;
-        height: 300px;
+        height: 18.75rem;
         order: 2;
     }
 
@@ -137,10 +151,15 @@ a:hover {
 
     .container_direita {
         width: 100%;
-        margin-top: 250px;
+        margin-top: 15.625rem;
     }
 
     .form_blanks {
         width: 100%;
+    }
+
+    .imagem_logo {
+        top: -10rem;
+        width: 8rem;
     }
 }
