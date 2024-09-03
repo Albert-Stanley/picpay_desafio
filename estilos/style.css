@@ -63,12 +63,13 @@ html {
 }
 
 .form_blanks {
-    padding: 15px;
-    width: 350px;
+    padding: 15px 30px ;
+    width: 100%; 
     outline: none;
     border: 3px solid transparent;
     border-radius: 10px;
     box-shadow: none;
+    font-size: 15px;
 }
 
 .form_blanks:hover {
@@ -81,7 +82,7 @@ html {
 
 button {
     cursor: pointer;
-    font-size: 12px;
+    font-size: 14px;
     padding: 8px 10px;
     font-weight: bold;
     color: var(--font-color);
@@ -95,6 +96,15 @@ button {
 
 button:hover {
     background-color: var(--verde-fraco);
+}
+
+a {
+    color: var(--font-color);
+}
+
+a:hover {
+    background-color: #E6F6F0;
+    width: 100px;
 }
 
 .levar_cadastro {
