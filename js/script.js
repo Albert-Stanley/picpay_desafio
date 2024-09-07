@@ -1,7 +1,19 @@
+import ehUmCpf from "./valida-cpf.js";
 const btnFisica = document.querySelector(".btn_fisica");
 const btnLojista = document.querySelector(".btn_lojista");
 const formFisica = document.querySelector(".form_fisica");
 const formLojista = document.querySelector(".form_lojista");
+const camposDoFormulario = document.querySelectorAll("[required]")
+
+camposDoFormulario.forEach((campo) => {
+    campo.addEventListener("blur", () => verificaCampo(campo) )
+})
+
+function verificaCampo(campo) {
+    if (campo.name == "cpfFisica" && campo.value.length >= 11) {
+      ehUmCpf(campo)
+   } 
+}
 
 document.addEventListener('DOMContentLoaded', function() {
     const lastForm = localStorage.getItem('lastForm');
@@ -85,4 +97,3 @@ function enviarDados(url, data) {
     });
 }
 
-//teste
