@@ -137,7 +137,7 @@ a:hover {
     }
 
     .container_direita {
-        top: 15rem;
+        top: 22rem;
         width: 100%;
         order: 1;
     }
@@ -155,7 +155,6 @@ a:hover {
 
     .container_direita {
         width: 100%;
-        margin-top: 15.625rem;
     }
 
     .form_blanks {
