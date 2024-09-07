@@ -11,61 +11,66 @@
 <body>
 
     <div class="container">
-    <div class="container_esquerda">
-        <!-- Titulo -->
-        <header id="title">
-            <h2>Abra sua conta PicPay</h2>
-        </header>
+        <div class="container_esquerda">
 
+            <img src="/image/logo.png" alt="logo picpay" id="logo">
 
-        <button class="btn_fisica">Conta digital Pessoa Física</button>
-        <button class="btn_lojista">Conta digital para Lojista</button>
-        <h2 class="msg_cadastro">Complete os campos abaixo para abrir sua conta PicPay:
-        </h2>
+            <div class="btn_escolha_form">
+                <button class="btn_fisica">Conta digital Pessoa Física</button>
+                <button class="btn_lojista">Conta digital para Lojista</button>
+            </div>
 
-        <!-- Formulário para Pessoa Física -->
-        <form id="formPessoaFisica" class="form_fisica">
-            <h3>Cadastro Pessoa Física</h3>
-            <label for="nomeFisica"></label>
-            <input class="form_blanks" type="text" id="nomeFisica" name="nomeFisica" placeholder="Nome*" minlength="4" required><br><br>
+            <h2 class="msg_cadastro">Complete os campos abaixo para abrir sua conta PicPay:
+            </h2>
 
-            <label for="emailFisica"></label>
-            <input class="form_blanks" type="email" id="emailFisica" name="emailFisica" placeholder="Email*" required><br><br>
+            <!-- Formulário para Pessoa Física -->
+            <form id="formPessoaFisica" class="form_fisica">
+                <label for="nomeFisica"></label>
+                <input class="form_blanks" type="text" id="nomeFisica" name="nomeFisica" placeholder="Nome*"
+                    minlength="4" required><br><br>
 
-            <label for="cpfFisica"></label>
-            <input class="form_blanks" type="text" id="cpfFisica" name="cpfFisica"
-                placeholder="Digite um CPF válido (somente números)*" maxlength="14" pattern="\d{3}\.?\d{3}\.?\d{3}-?\d{2}" required><br><br>
+                <label for="emailFisica"></label>
+                <input class="form_blanks" type="email" id="emailFisica" name="emailFisica" placeholder="Email*"
+                    required><br><br>
 
-            <label for="senhaFisica"></label>
-            <input class="form_blanks" type="password" id="senhaFisica" name="senhaFisica" placeholder="Senha*" minlength="4" required><br><br>
+                <label for="cpfFisica"></label>
+                <input class="form_blanks" type="text" id="cpfFisica" name="cpfFisica"
+                    placeholder="Digite um CPF válido (somente números)*" maxlength="14"
+                    pattern="\d{3}\.?\d{3}\.?\d{3}-?\d{2}" required><br><br>
 
-            <button class="btn_cadastrar_fisica" type="submit">Enviar</button>
-        </form>
+                <label for="senhaFisica"></label>
+                <input class="form_blanks" type="password" id="senhaFisica" name="senhaFisica" placeholder="Senha*"
+                    minlength="4" required><br><br>
 
-        <!-- Formulário para Pessoa Lojista -->
-        <form id="formPessoaLojista" class="form_lojista">
-            <h3>Cadastro Pessoa Lojista</h3>
-            <label for="nomeLojista"></label>
-            <input class="form_blanks" type="text" id="nomeLojista" name="nomeLojista" placeholder="Nome*" minlength="4" required><br><br>
+                <button class="btn_cadastrar_fisica" type="submit">Enviar</button>
+            </form>
 
-            <label for="emailLojista"></label>
-            <input class="form_blanks" type="email" id="emailLojista" name="emailLojista" placeholder="Email*" required><br><br>
+            <!-- Formulário para Pessoa Lojista -->
+            <form id="formPessoaLojista" class="form_lojista">
+                <label for="nomeLojista"></label>
+                <input class="form_blanks" type="text" id="nomeLojista" name="nomeLojista" placeholder="Nome*"
+                    minlength="4" required><br><br>
 
-            <label for="cnpjLojista"></label>
-            <input class="form_blanks" type="text" id="cnpjLojista" name="cnpjLojista"
-                placeholder="Digite um CNPJ válido (somente números)*" maxlength="14" pattern="\d{2}\.?\d{3}\.?\d{3}/?\d{4}-?\d{2}" required><br><br>
+                <label for="emailLojista"></label>
+                <input class="form_blanks" type="email" id="emailLojista" name="emailLojista" placeholder="Email*"
+                    required><br><br>
 
-            <label for="senhaLojista"></label>
-            <input class="form_blanks" type="password" id="senhaLojista" name="senhaLojista" placeholder="Senha*" 
-            minlength="4" required><br><br>
+                <label for="cnpjLojista"></label>
+                <input class="form_blanks" type="text" id="cnpjLojista" name="cnpjLojista"
+                    placeholder="Digite um CNPJ válido (somente números)*" maxlength="14"
+                    pattern="\d{2}\.?\d{3}\.?\d{3}/?\d{4}-?\d{2}" required><br><br>
 
-            <button class="btn_cadastrar_lojista" type="submit">Enviar</button>
-        </form>
-    </div>
+                <label for="senhaLojista"></label>
+                <input class="form_blanks" type="password" id="senhaLojista" name="senhaLojista" placeholder="Senha*"
+                    minlength="4" required><br><br>
 
-    <div class="container_direita">
-        <img src="/image/img_propaganda.jpg" alt="imagem_publi">
-    </div>
+                <button class="btn_cadastrar_lojista" type="submit">Enviar</button>
+            </form>
+        </div>
+
+        <div class="container_direita">
+            <img src="/image/img_propaganda.jpg" alt="imagem_publi">
+        </div>
     </div>
 
 

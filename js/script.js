@@ -1,8 +1,5 @@
 import ehUmCpf from "./valida-cpf.js";
-const btnFisica = document.querySelector(".btn_fisica");
-const btnLojista = document.querySelector(".btn_lojista");
-const formFisica = document.querySelector(".form_fisica");
-const formLojista = document.querySelector(".form_lojista");
+//validando o Cpf
 const camposDoFormulario = document.querySelectorAll("[required]")
 
 camposDoFormulario.forEach((campo) => {
@@ -15,48 +12,34 @@ function verificaCampo(campo) {
    } 
 }
 
-document.addEventListener('DOMContentLoaded', function() {
-    const lastForm = localStorage.getItem('lastForm');
-    if (lastForm === 'fisica') {
-        formFisica.classList.add('active');
-    } else {
-        formLojista.classList.add('active');
+//alterando os formularios na pagina de casdastro
+document.addEventListener("DOMContentLoaded", function () {
+    const btnFisica = document.querySelector('.btn_fisica');
+    const btnLojista = document.querySelector('.btn_lojista');
+    const formFisica = document.getElementById('formPessoaFisica');
+    const formLojista = document.getElementById('formPessoaLojista');
+
+    function toggleForm(formToShow, formToHide, activeButton, inactiveButton) {
+        formToShow.style.display = 'block';
+        formToHide.style.display = 'none';
+        activeButton.classList.add('active');
+        inactiveButton.classList.remove('active');
     }
 
-    btnFisica.addEventListener('click', function() {
-        formFisica.classList.add('active');
-        formLojista.classList.remove('active');
-        localStorage.setItem('lastForm', 'fisica');
+    // Inicialmente, mostra o formulário Pessoa Física e oculta o de Lojista
+    toggleForm(formFisica, formLojista, btnFisica, btnLojista);
+
+    // Eventos de clique nos botões
+    btnFisica.addEventListener('click', function () {
+        toggleForm(formFisica, formLojista, btnFisica, btnLojista);
     });
 
-    btnLojista.addEventListener('click', function() {
-        formLojista.classList.add('active');
-        formFisica.classList.remove('active');
-        localStorage.setItem('lastForm', 'lojista');
-    });
-});
-document.addEventListener('DOMContentLoaded', function() {
-    const lastForm = localStorage.getItem('lastForm');
-    if (lastForm === 'fisica') {
-        formFisica.classList.add('active');
-    } else {
-        formLojista.classList.add('active');
-    }
-
-    btnFisica.addEventListener('click', function() {
-        formFisica.classList.add('active');
-        formLojista.classList.remove('active');
-        localStorage.setItem('lastForm', 'fisica');
-    });
-
-    btnLojista.addEventListener('click', function() {
-        formLojista.classList.add('active');
-        formFisica.classList.remove('active');
-        localStorage.setItem('lastForm', 'lojista');
+    btnLojista.addEventListener('click', function () {
+        toggleForm(formLojista, formFisica, btnLojista, btnFisica);
     });
 });
 
-
+//enviando os dados para o backend
 document.getElementById('formPessoaFisica').addEventListener('submit', function(event) {
     event.preventDefault();
     const data = {
