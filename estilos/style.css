@@ -38,6 +38,10 @@ html {
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    /*impede que copiem a imagem*/
+    user-select: none; 
+    pointer-events: none;
+    -webkit-user-drag: none;
 }
 
 .container_esquerda img {
@@ -64,6 +68,10 @@ html {
     max-width: 100%;
     height: auto;
     margin-top: 1rem;
+    /*impede que copiem a imagem*/
+    user-select: none; 
+    pointer-events: none;
+    -webkit-user-drag: none;
 }
 
 #title {

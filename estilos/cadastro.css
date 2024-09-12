@@ -14,19 +14,74 @@
     --verde-fraco: #238662;
 }
 
-body, html {
+body,
+html {
     height: 100%;
     background-color: var(--background-color);
+}
+
+#logo {
+    width: 10rem;
+    padding: 0 0 3.125rem 0;
+    position: absolute;
+    max-width: 100%;
+    height: auto;
+    margin-top: 1rem;
+    top: 1rem;
+    /*impede que copiem a imagem*/
+    user-select: none; 
+    pointer-events: none;
+    -webkit-user-drag: none;
+}
+
+.btn_escolha_form {
+    display: flex;
+    padding: 0 4rem;
+    width: 100%;
+}
+
+.btn_fisica,
+.btn_lojista {
+    display: inline-block;
+    padding: 1.5rem 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    border: none;
+    background: none;
+    color: gray;
+    position: relative;
+    width: 100%;
+}
+
+.btn_fisica.active,
+.btn_lojista.active {
+    color: var(--verde-fraco);
+}
+
+.btn_fisica.active::after,
+.btn_lojista.active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    height: 3px;
+    width: 100%;
+    background-color: var(--verde-forte);
+    border-radius: 2px;
+}
+
+.msg_cadastro {
+    padding-top: 2.5rem;
+    font-size: small;
+    color: var(--title-color);
 }
 
 .container {
     display: flex;
     width: 100%;
     height: 100%;
-}
-
-.active {
-    display: block;
 }
 
 .container_esquerda {
@@ -39,24 +94,12 @@ body, html {
     align-items: center;
 }
 
-#title {
-    margin-bottom: 1.25rem;
-    text-align: center;
-    text-transform: uppercase;
-    color: var(--white);
-    font-size: 1.5625rem;
-}
-
-.msg_cadastro {
-    padding-top: 2.5rem;
-    font-size: small;
-    color: var(--title-color);
-}
-
-#formPessoaFisica, #formPessoaLojista {
+#formPessoaFisica,
+#formPessoaLojista {
     margin-top: 0.625rem;
     color: var(--font-color);
     max-width: 100%;
+
 }
 
 .form_blanks {
@@ -81,7 +124,8 @@ body, html {
     box-shadow: none;
 }
 
-.btn_cadastrar_fisica, .btn_cadastrar_lojista {
+.btn_cadastrar_fisica,
+.btn_cadastrar_lojista {
     cursor: pointer;
     font-size: 0.875rem;
     padding: 0.5rem 0.625rem;
@@ -95,7 +139,8 @@ body, html {
     border: 0.1875rem solid transparent;
 }
 
-.btn_cadastrar_fisica:hover, .btn_cadastrar_lojista:hover {
+.btn_cadastrar_fisica:hover,
+.btn_cadastrar_lojista:hover {
     background-color: var(--verde-fraco);
 }
 
@@ -104,9 +149,17 @@ body, html {
     background-size: cover;
     background-position: center;
     display: flex;
+    /*impede que copiem a imagem*/
+    user-select: none; 
+    pointer-events: none;
+    -webkit-user-drag: none;
 }
 
-@media (max-width: 1040px){
+.active {
+    display: block;
+}
+
+@media (max-width: 1040px) {
     .container {
         flex-direction: column;
     }
@@ -138,13 +191,17 @@ body, html {
 }
 
 @media (max-width: 480px) {
+
+    .container {
+        margin-top: 2rem;
+    }
     .container_direita {
         display: none;
     }
 
     .container_esquerda {
         width: 100%;
-        margin-top: 1.625rem;
+        margin-top: 2.625rem;
     }
 
     .form_blanks {
